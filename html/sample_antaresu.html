@@ -1,0 +1,181 @@
+<div class="page-body">
+    <div style="
+    display: flex;
+    flex-direction: column;
+">
+    <span class="title-name">
+    <div class="name">名前</div>
+    <p>星言葉:内面を見つめる瞳</p>
+    </span>
+    <div class="icon" style="background: url(imge/antares-large.png) 0% 0% / cover no-repeat;"></div>
+</div>
+    <div class="info-screen">
+     <input type="radio" name="page-info-tab" id="basic" checked><label for="basic">基本</label>
+     <input type="radio" name="page-info-tab" id="status"><label for="status">ステータス</label>
+     <input type="radio" name="page-info-tab" id="item"><label for="item">持ち物</label>
+     <input type="radio" name="page-info-tab" id="memo"><label for="memo">メモ</label>
+     <input type="radio" name="page-info-tab" id="url"><label for="url">リンク</label>
+     <div class="basic-page info-page">
+        <div class="info-page-in">
+            <ruby style="font-size: 50px" class="name">名前 <rt>なまえ</rt> </ruby> <span style="font-size: 30px;">職業:精神科医</span><br><br>
+           <div style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-around;">
+             <div class="info-txt">誕生日:12月1日</div>  <div class="info-txt">性別:男</div>
+             <div class="info-txt">身長:<span class="height">-</span>cm</div>   <div class="info-txt">年齢:--</div>   
+             </div>
+             <div class="info-txt"> <p>かいぶつたちとマホラカルトHO4</p></div>
+             <div style="font-size: 25px; margin: 20px;">
+                 <span style="font-size: 30px">キャラクター紹介</span><br>
+                無邪気に笑う犯罪者。<br>見た目は夜空の様な髪で白衣と赤いスカーフが特徴の男の子。普段からゆるく子供らしい行動が多い。しかし根本から常識を理解してない犯罪者で要注意人物。<br>
+                医療と人の心について深い興味がある。
+             </div>
+        </div>
+     </div>
+     <div class="status-page info-page">
+        <div class="info-page-in">
+            <div class="status-list" style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-around;">
+                <p id="STR" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="CON" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="POW" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="DEX" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="APP" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="SIZ" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="INT" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+                <p id="EDU" class="info-txt" style="height: 30px; width: 200px; margin: 10px;"></p>
+            </div>
+            <div class="skill-list">
+                技能一覧工事中
+            </div>
+        </div>
+     </div>
+     <div class="item-page info-page">
+        <div class="info-page-in"></div>
+     </div>
+     <div class="memo-page info-page">
+        <div class="info-page-in"></div>
+     </div>
+     <div class="url-page info-page">
+        <div class="info-page-in"></div>
+     </div>
+    </div>
+
+ </div> 
+ <style>
+ .page-body{
+     display: flex;
+     flex-direction: row;
+     height: 900px;
+     background: url(imge/haikeiSheet.png) no-repeat;
+     animation: back 1.4s steps(15) infinite;
+ }
+ @keyframes back {
+    to{
+        background-position: -23250px 0;
+    }
+ }
+ #pc-dsp{
+    overflow: hidden;
+ }
+ .title-name{
+    animation: name-in 0.6s steps(8);
+ }
+ @keyframes name-in {
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+ }
+ .icon{
+     
+     background-size: cover;
+     width: 800px;
+     height: 800px;
+     position: absolute;
+     bottom: -10px;
+ }
+ .name{
+     font-size: 60px;
+     width: 500px;
+ }
+ .info-screen{
+    margin-left: 20px;
+ }
+ [name="page-info-tab"]{
+    display: none;
+ }
+ [name="page-info-tab"] ~ label{
+    font-size: 40px;
+    margin: 20px;
+ }
+ [name="page-info-tab"]:checked + label{
+color: #ffffff;
+ }
+ .basic-page,
+ .status-page,
+ .item-page,
+ .memo-page,
+ .url-page{
+     display: none;
+ }
+ #basic:checked ~ .basic-page,
+ #status:checked ~ .status-page,
+ #item:checked ~ .item-page,
+ #memo:checked ~ .memo-page,
+ #url:checked ~ .url-page{
+     display: block;
+ }
+
+.info-page{
+    border: solid 3px;
+    height: 80%;
+    margin: 20px;
+    padding: 10px;
+    animation: page-in 1s steps(8);
+    background-color: #ffffff67;
+    width: 900px;
+}
+@keyframes page-in {
+    0%{
+        background-color: #000000;
+        padding: 0px;
+        height: 0px;
+        width: 0px;
+        margin-top: 50%;
+        margin-left: 50%;
+    }
+    50%{
+        background-color: #000000;
+        height: 0px;
+        width: 900px;
+        margin-top: 50%;
+        margin-left: 20px;
+    }
+    
+    100%{
+        height: 80%;
+        margin-top: 20px;
+    }
+}
+.info-page-in{
+    animation: page-txt-in 2s;
+}
+@keyframes page-txt-in {
+    0%{
+        display: none;
+    }
+    50%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+.info-txt{
+    text-decoration:underline;
+    font-size: 30px;
+    width: 400px;
+    margin: 20px;
+    height: 60px;
+}
+ </style>
