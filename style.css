@@ -1,0 +1,174 @@
+@font-face { 
+    /* ① ここにfont-familyで指定したい名前を書く*/
+    font-family: "doto"; 
+  
+    /* フォントが置かれているパスを書く */ 
+    src: url("BestTen-CRT.otf") format("truetype") 
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "doto";
+}
+body{
+    overflow-y: hidden;
+}
+#spoiler-btn-menu{
+    display: none;
+}
+#spoiler-btn-menu ~ label{
+border: solid;
+}
+#spoiler-btn-menu:checked ~ label{
+color: rgb(146, 221, 255);
+}
+.heddr{
+height: 100px;
+background-color: rgb(154, 164, 182);
+padding: 5px
+}
+.title-txt{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color: #0088ff;
+}
+.spoiler-munu{
+display: none;
+width: 600px;
+height: auto;
+background-color:antiquewhite;
+position: absolute;
+padding: 10px;
+z-index: 100;
+}
+#spoiler-btn-menu:checked ~ .spoiler-munu{
+display: block;
+}
+.spoiler-btn{
+display: none;
+}
+.sp-btn-div label{
+border: solid;
+}
+.sp-btn-div{
+margin: 10px 0;
+}
+.spoiler-btn:checked ~ label{
+    color: #00aeff;
+    box-shadow: 0 0px black;
+    transform: translateY(0);
+}
+.spoiler-btn ~ label{
+    display: inline-block;
+    box-shadow: 0 3px black;
+    transform: translateY(-3px);
+}
+.spoiler-btn-sce:checked ~ .sp-btn-label-ho{
+pointer-events: none;
+opacity: 0.5;
+text-decoration: line-through;
+}
+.sp-mituuka-btn{
+pointer-events: none;
+opacity: 0.5;
+text-decoration: line-through; 
+}
+.page-list{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+#index-selest{
+    appearance: none;
+    font-family: 'doto';
+}
+select::-ms-expand {
+    display: none;
+}
+#inv:checked ~ #list{
+    flex-direction: column-reverse;
+}
+#inv{
+    display: none;
+}
+
+.inv-label{
+    width: 15px;
+    height: 15px;
+    background-image: url(imge/up.png);
+    display: inline-block;
+    background-size: cover;
+}
+#inv:checked ~ label{
+    background-image: url(imge/down.png);
+}
+.filter-menu{
+    position: absolute;
+    background: #dedede;
+    border: solid;
+    z-index: 50;
+    margin-left: 10px;
+    display: none;
+}
+#filter:checked ~ .filter-menu{
+    display: block;
+}
+  #list{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 85.5vh;
+    width: 240px;
+  }
+input[name="PcList"]{
+    display: none;
+}
+input[name="PcList"]:checked + div .tab-bar{
+    background-color: rgb(0, 174, 255);
+}
+input[name="PcList"]:checked ~ .pc-tab-list{
+    transform: translateX(30px);
+}
+.pc-tab-list{
+    transition: all 0.3s;
+}
+.index-pc[data-no-use-hid="true"]{
+    display: none !important;
+}
+.index-pc[data-neta-hid="true"]{
+    display: none !important;
+}
+#pc-dsp{
+    border-left: solid;
+    height: 90vh;
+    width: 100%;
+}
+input[name="PcList"]:checked ~ .pc-info{
+    display: block;
+}
+.tab-name{
+    font-family: "doto";
+}
+.tab-scenario-name{
+    font-size: 13px;
+    width: 100px;
+    color: #0058e3;
+    display: block;
+}
+.tab-txt{
+    display: inline-block;
+}
+.tab-bar{
+    height: 20px;
+    width: 300px;
+    position: absolute;
+    top: 85px;
+    z-index: -1;
+}
+.pc-tab{
+    display: flex;
+}
+/*瑠璃選択画像切り替え*/

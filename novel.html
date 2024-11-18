@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索者ノベル</title>
+    <link rel="stylesheet" href="novel.css">
+</head>
+<body>
+    <div class="heddr" >
+        <div class="title-txt">シヤクナ4897の探索者</div>
+      <div>
+        <input type="checkbox"id="spoiler-btn-menu"><label for="spoiler-btn-menu">ネタバレ表示</label>
+        <div class="spoiler-munu">
+            シナリオのネタバレ要素はデフォルトで非表示になってます。既知シナリオもしくは現行未通過でも同じHOを所持していたらそれぞれ選択することで表示されます。
+        <br><span style="opacity: 0.5;font-size: 14px;">ステータスの公開を止められたシナリオでは順番入れ変えでステータス順にした場合その探索者は下のボタンを押さない限り非表示になります。</span>
+        <div class="spoiler-list-btn">
+            <div class="sp-btn-div">
+                <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-spsk-btn" data-scenario="ソープスクール"><label for="sp-spsk-btn">ソープスクール</label>
+                <input type="checkbox" class="spoiler-btn" name="sp-btn" id="sp-spsk-h-btn" data-scenario="ソープスクールHO"><label for="sp-spsk-h-btn" class="sp-btn-label-ho">ソープスクールHO4</label>
+                </div>
+                <div class="sp-btn-div">
+                <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-killkill-btn" data-scenario="キルキルイキル"><label for="sp-killkill-btn">キルキルイキル</label>
+                </div>
+                <div class="sp-btn-div">
+                    <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-kimh-btn" data-scenario="かいぶつたちとマホラカルト"><label for="sp-kimh-btn">かいぶつたちとマホラカルト</label>
+                    <input type="checkbox" class="spoiler-btn" name="sp-btn" id="sp-kimh-h-btn" data-scenario="かいぶつたちとマホラカルトHO"><label for="sp-kimh-h-btn" class="sp-btn-label-ho">かいぶつたちとマホラカルトHO4</label>
+                </div>
+                <div class="sp-btn-div">
+                    <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-zai-btn" data-scenario="Zai"><label for="sp-zai-btn">Zai</label>
+                    <input type="checkbox" class="spoiler-btn" name="sp-btn" id="sp-zai-h-btn" data-scenario="ZaiHO"><label for="sp-zai-h-btn" class="sp-btn-label-ho">ZaiHO在</label>
+                </div>
+                <div class="sp-btn-div">
+                    <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-nws-btn" data-scenario="庭師はなにを口遊む"><label for="sp-nws-btn">庭師はなにを口遊む</label>
+                    <input type="checkbox" class="spoiler-btn" name="sp-btn" id="sp-nws-h-btn" data-scenario="庭師はなにを口遊むHO"><label for="sp-nws-h-btn" class="sp-btn-label-ho">庭師はなにを口遊むHO2</label>
+                </div>
+                <div class="sp-btn-div">
+                    <input type="checkbox" class="spoiler-btn spoiler-btn-sce" name="sp-btn" id="sp-void-btn" data-scenario="VOID"><label for="sp-void-btn" class="sp-mituuka-btn">VOID</label>
+                    <input type="checkbox" class="spoiler-btn" name="sp-btn" id="sp-void-h-btn" data-scenario="VOIDHO"><label for="sp-void-h-btn" class="sp-btn-label-ho">VOID HO4</label>
+                </div>
+
+        </div>
+        </div>
+    </div> 
+    <div class="page-list">
+        <a href="index.html">リスト</a>
+    </div>
+    </div>
+    <div id="overlay" class="hidden"></div>
+    <div id="menu-container">
+        <h1>物語を選んでください</h1>
+        <button class="story-button" data-scenario="scenario1.json">サンプルシナリオ</button>
+        <button class="story-button" data-scenario="scenario2.json">サンプルシナリオ2</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="text-box">
+            <p id="character-name"></p>
+            <p id="text"></p>
+        </div>
+        <div id="character-container"></div>
+    </div>
+    <script src="novel.js"></script>
+</body>
+</html>
