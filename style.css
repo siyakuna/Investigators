@@ -9,6 +9,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "doto";
+    image-rendering: pixelated;
 }
 body{
     overflow-y: hidden;
