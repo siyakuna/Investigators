@@ -7,7 +7,7 @@
     <div class="name">名前</div>
     <p>星言葉:内面を見つめる瞳</p>
     </span>
-    <div class="icon" style="background: url(imge/antares-large.png) 0% 0% / cover no-repeat;"></div>
+    <div class="icon" data-img="true"></div>
 </div>
     <div class="info-screen">
      <input type="radio" name="page-info-tab" id="basic" checked><label for="basic">基本</label>
@@ -87,12 +87,15 @@
     }
  }
  .icon{
-     
+     background: url(imge/アンタレス1.png);
      background-size: cover;
      width: 800px;
      height: 800px;
      position: absolute;
      bottom: -10px;
+ }
+ .icon:hover{
+    background-position: right;
  }
  .name{
      font-size: 60px;
