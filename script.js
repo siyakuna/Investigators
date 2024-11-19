@@ -65,7 +65,7 @@ document.querySelectorAll(".tab-inp").forEach(v => v.addEventListener("change", 
                     document.getElementsByClassName("name")[0].innerHTML = PcListDate[pcIndex].name
                     document.getElementsByClassName("name")[1].innerHTML = PcListDate[pcIndex].name + `<rt>${PcListDate[pcIndex].rubi}</rt>`
                     document.getElementsByClassName("height")[0].innerHTML = PcListDate[pcIndex].height
-                    if(!document.getElementsByClassName("icon")[0].data.img) document.getElementsByClassName("icon")[0].style.background = `url(imge/${PcListDate[pcIndex].img}) 0% 0% / cover no-repeat`;
+                   if(document.getElementsByClassName("icon")[0].dataset.img==="false") document.getElementsByClassName("icon")[0].style.background = `url(imge/${PcListDate[pcIndex].img}) 0% 0% / cover no-repeat`;
                     if(!PcListDate[pcIndex].spoiler||spoilerOff.includes(PcListDate[pcIndex].scenario[0] + "HO")||spoilerOff.includes(PcListDate[pcIndex].scenario[0])){//ネタバレ防止
                         document.getElementById('STR').innerHTML = "STR:" + PcListDate[pcIndex].status.STR
                         document.getElementById('CON').innerHTML = "CON:" + PcListDate[pcIndex].status.CON
